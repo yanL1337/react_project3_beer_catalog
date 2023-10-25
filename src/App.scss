@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Helvetica;
+}
+
+img {
+  max-width: 100%;
+}
+
+// # Home Page
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  section {
+    padding: 5vh 5vw;
+    margin: 0 auto;
+    article {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font-size: 2rem;
+      }
+
+      a {
+        text-decoration: none;
+        background-color: #dea924;
+        color: white;
+        font-size: 3.5rem;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
+// - Sticky Bar
+
+.fixedBar {
+  background-color: #dea924;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.4;
+  transition: 0.5s ease-in-out;
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .circle {
+    background-color: white;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 10px;
+  }
+}
+
+// # Overview Page
+
+.overview {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 5vh 5vw;
+
+  // ! Beer
+
+  article {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+    border-bottom: 2px solid gray;
+    img {
+      max-width: 100%;
+    }
+    .content {
+      width: 70vw;
+      padding-left: 20vw;
+      h2 {
+        font-weight: bolder;
+        font-size: 5rem;
+      }
+      h3 {
+        font-weight: bold;
+        font-size: 4rem;
+        color: #dea924;
+        margin-bottom: 5vh;
+      }
+      p {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 5vh;
+      }
+      a {
+        font-size: 4.5rem;
+        color: white;
+        background-color: #dea924;
+        text-decoration: none;
+        border-radius: 20px;
+        padding: 0 3vw;
+      }
+    }
+  }
+}
+
+// - Arrow
+
+.arrow {
+  background-color: #dea924;
+  width: fit-content;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+// # Beer Detail page
+
+.beer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  img {
+    max-width: 100%;
+    width: 20vw;
+  }
+  .beerInfos {
+    padding: 2vh 2vw;
+    h2 {
+      font-size: 5rem;
+    }
+    h3 {
+      font-size: 3rem;
+      color: #dea924;
+      margin-bottom: 5vh;
+    }
+    .infos {
+      display: flex;
+      justify-content: space-between;
+      &:nth-of-type(2) {
+        margin-bottom: 2vh;
+      }
+      p {
+        color: gray;
+        font-size: 2rem;
+        margin-bottom: 1vh;
+      }
+    }
+    p {
+      font-size: 1.8rem;
+      margin-bottom: 2vh;
+    }
+  }
+}
